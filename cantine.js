@@ -1,21 +1,21 @@
-// Ce sont Prix unitaires
+// Prix unitaires
 const prixUnitaireAttiekePoisson = 1500;
 const prixUnitaireRizPoulet = 2000;
 const prixUnitaireAllocoOeuf = 1000;
 
-// Pour les Données de la commande
+// Données de la commande
 const client = "Awa";
-const codePlat = 1;
-const quantiteTexte = "3";              // reçue sous forme de texte
-const quantite = Number(quantiteTexte); // convertie en nombre
-const montantVerse = 5000;
+const codePlat = 3; // On vas utiliser 1 pour Attiéké-poisson, 2 pour Riz-poulet, 3 pour Alloco-œuf
+const quantiteTexte = "4";              // C'est le reçue sous forme de texte
+const quantite = Number(quantiteTexte); // C'est la conversion en nombre
+const montantVerse = 4000;
 
 // C'est la Fonction qui calcule le montant total
 function calculerTotal(prixUnitaire, quantite) {
   return prixUnitaire * quantite;
 }
 
-// C'est l'étape pour déterminer le plat et son prix unitaire
+// Déterminer le plat et son prix unitaire
 let nomPlat;
 let prixUnitaire;
 
@@ -32,15 +32,24 @@ if (codePlat === 1) {
   console.log("Code de plat invalide");
 }
 
-// Appeler la fonction et récupérer le résultat
+// Calcul du total
 const montantTotal = calculerTotal(prixUnitaire, quantite);
 
-// C'est l'étape pour calculer le reste à rendre
-const reste = montantVerse - montantTotal;
-
-// Affichage
+// Récapitulatif
+console.log(`===== Récapitulatif =====`);
 console.log(`Client : ${client}`);
-console.log(`Plat : ${nomPlat} x ${quantite}`);
-console.log(`Montant total : ${montantTotal} FCFA`);
+
+for (let i = 1; i <= quantite; i++) {
+  console.log(`Portion ${i} : ${nomPlat} - ${prixUnitaire} FCFA`);
+}
+
+console.log(`Total à payer : ${montantTotal} FCFA`);
 console.log(`Montant versé : ${montantVerse} FCFA`);
-console.log(`Reste : ${reste} FCFA`);
+
+if (montantVerse >= montantTotal) {
+  const monnaie = montantVerse - montantTotal;
+  console.log(`Monnaie à rendre : ${monnaie} FCFA`);
+} else {
+  const manque = montantTotal - montantVerse;
+  console.log(`Montant insuffisant : il manque ${manque} FCFA`);
+}

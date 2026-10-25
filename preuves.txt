@@ -1,0 +1,26 @@
+              ===== Récapitulatif du cas 1 =====
+Client : Awa
+Portion 1 : Attiéké-poisson - 1500 FCFA
+Portion 2 : Attiéké-poisson - 1500 FCFA
+Portion 3 : Attiéké-poisson - 1500 FCFA
+Total à payer : 4500 FCFA
+Montant versé : 5000 FCFA
+Monnaie à rendre : 500 FCFA
+
+===== Récapitulatif du cas 2 =====
+Client : Awa
+Portion 1 : Riz-poulet - 2000 FCFA
+Portion 2 : Riz-poulet - 2000 FCFA
+Total à payer : 4000 FCFA
+Montant versé : 3000 FCFA
+Montant insuffisant : il manque 1000 FCFA
+
+===== Récapitulatif du cas 3 =====
+Client : Awa
+Portion 1 : Alloco-œuf - 1000 FCFA
+Portion 2 : Alloco-œuf - 1000 FCFA
+Portion 3 : Alloco-œuf - 1000 FCFA
+Portion 4 : Alloco-œuf - 1000 FCFA
+Total à payer : 4000 FCFA
+Montant versé : 4000 FCFA
+Monnaie à rendre : 0 FCFA
