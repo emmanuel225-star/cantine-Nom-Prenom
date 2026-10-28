@@ -1,9 +1,10 @@
-// Prix unitaires
+//  Ce sont les prix unitaires
 const prixUnitaireAttiekePoisson = 1500;
 const prixUnitaireRizPoulet = 2000;
 const prixUnitaireAllocoOeuf = 1000;
 
-// Données de la commande
+// Ce sont les données de la commande
+
 const client = "Awa";
 const codePlat = 3; // On vas utiliser 1 pour Attiéké-poisson, 2 pour Riz-poulet, 3 pour Alloco-œuf
 const quantiteTexte = "4";              // C'est le reçue sous forme de texte
@@ -16,6 +17,7 @@ function calculerTotal(prixUnitaire, quantite) {
 }
 
 // Déterminer le plat et son prix unitaire
+
 let nomPlat;
 let prixUnitaire;
 
@@ -53,3 +55,13 @@ if (montantVerse >= montantTotal) {
   const manque = montantTotal - montantVerse;
   console.log(`Montant insuffisant : il manque ${manque} FCFA`);
 }
+
+// Demander à l'utilisateur des informations
+
+rl.question("Veuillez entrer votre nom : ", (nom) => {
+  console.log(`Bonjour, ${nom}!`);
+});
+rl.question("Veuillez entrer le code du plat (1, 2 ou 3) : ", (code) => { console.log(`Vous avez choisi le plat avec le code : ${code}`); }); 
+rl.question("Veuillez entrer la quantité désirée : ", (quantite) => { console.log(`Vous avez choisi une quantité de : ${quantite}`); });
+rl.question("Veuillez entrer le montant versé : ", (montant) => { console.log(`Vous avez versé : ${montant} FCFA`); });
+rl.close();
